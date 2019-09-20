@@ -21,10 +21,11 @@ def run(path):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
 
-    svclassifier = SVC(kernel='sigmoid', gamma='scale')  # or 'sigmoid' or 'rbf'
+    svclassifier = SVC(kernel='s'
+                              'igmoid', gamma='scale')  # or 'sigmoid' or 'rbf'
     svclassifier.fit(X_train, y_train)
 
-    filename = 'finalized_model.sav'
+    filename = 'finalized_modelaa.sav'
     pickle.dump(svclassifier, open(filename, 'wb'))
 
     y_pred = svclassifier.predict(X_test)
